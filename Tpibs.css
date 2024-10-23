@@ -1,0 +1,346 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav section aside"
+        "footer footer footer";
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    gap: 10px;
+    padding: 10px;
+    background-color: #212A3E;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0; /* Border kotak */
+    border-radius: 20px; /* Sudut kotak melengkung */
+    padding: 20px; /* Ruang dalam kotak */
+    background-color: #e0e0e0; /* Warna latar belakang kotak */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+    width: 100%; /* Lebar kotak diatur lebih panjang */ 
+}
+
+.profile-image {
+    width: 100px; /* Ukuran gambar profil */
+    height: 100px;
+    border: 2px solid #000000; /* Warna border gambar */
+    border-radius: 5px; /* Sudut gambar melengkung */
+    margin-right: 20px; /* Jarak antara gambar dan teks */
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar memenuhi kotak */
+}
+
+.profile-text {
+    font-weight: bold; /* Teks tebal untuk nama */
+    font-size: 25px; /* Ukuran font untuk nama */
+    color: #333; /* Warna teks */
+}
+
+header {
+    grid-area: header;
+    background-color: #868686;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 2%;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px; /* Membuat sudut sedikit melengkung */
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-bottom: 20px; /* Menambah jarak di bawah navigasi */
+}
+
+nav ul {
+    list-style-type: none; /* Menghilangkan bullet pada daftar */
+    padding: 0; /* Menghilangkan padding default */
+    margin: 0; /* Menghilangkan margin default */
+}
+
+nav ul li {
+    margin-bottom: 15px; /* Menambah jarak antar item navigasi */
+}
+
+nav ul li:last-child {
+    margin-bottom: 0; /* Menghilangkan jarak setelah item terakhir */
+}
+
+nav ul li a {
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+    color: #333; /* Mengatur warna teks menjadi lebih gelap */
+    display: block; /* Membuat seluruh item daftar bisa diklik */
+    padding: 10px 15px; /* Menambah ruang dalam pada tautan */
+    border-radius: 5px; /* Membuat sudut tautan menjadi melengkung */
+    background-color: #f5f5f5; /* Menambah latar belakang terang pada tautan */
+    transition: background-color 0.3s ease; /* Transisi halus untuk efek hover */
+}
+
+nav ul li a:hover {
+    background-color: #ccc; /* Latar belakang lebih gelap saat di-hover */
+    color: #000; /* Mengubah warna teks saat di-hover */
+}
+
+section {
+    grid-area: section;
+    background-color: #e0e0e0;
+    padding: 20px;
+    margin-bottom: 20px; /* Adds spacing between the section and elements below it */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 2%; /* Keeps border-radius as it is */
+    font-size: 20px;
+    font-family: sans-serif;
+    line-height: 1.6; /* Adds spacing between lines */
+}
+
+section p {
+    margin-bottom: 15px; /* Adds space between paragraphs */
+}
+
+section h2 {
+    margin-bottom: 20px; /* Adds space between heading and the following text */
+}
+
+section strong {
+    margin-right: 10px; /* Adds space between the strong text and the rest of the content */
+}
+
+aside {
+    grid-area: aside;
+    background-color: #e0e0e0; /* Warna latar belakang */
+    padding: 20px; /* Jarak dalam (padding) */
+    border-radius: 8px; /* Membuat sudut agak melengkung */
+    font-size: 20px; /* Ukuran font */
+    font-family: sans-serif;
+    margin-bottom: 20px; /* Menambah jarak di bawah elemen aside */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Menambah bayangan untuk efek kedalaman */
+}
+
+aside h3 {
+    margin-bottom: 15px; /* Jarak di bawah judul */
+    font-size: 22px; /* Ukuran font untuk judul */
+    color: #000000; /* Warna teks judul lebih gelap */
+}
+
+aside ul {
+    list-style-type: disc; /* Memberikan bullet pada daftar */
+    padding-left: 20px; /* Menambah indentasi (jarak dari kiri) untuk daftar */
+}
+
+aside ul li {
+    margin-bottom: 10px; /* Jarak antar item dalam daftar */
+    color: #000000; /* Warna teks item daftar yang lebih terang */
+}
+
+aside ul li:last-child {
+    margin-bottom: 0; /* Menghilangkan jarak bawah untuk item terakhir */
+}
+
+footer {
+    grid-area: footer;
+    background-color: #394867;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 2%;
+    display: flex;
+    justify-content: space-between; /* Membuat jarak di antara elemen */
+    align-items: center; /* Vertikal tengah */
+}
+
+footer .left {
+    text-align: left; /* Teks rata kiri */
+}
+
+footer .center {
+    text-align: center;
+    flex-grow: 1; /* Agar bagian tengah fleksibel */
+}
+
+footer .right {
+    text-align: right; /* Teks rata kanan */
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1, h2, h3 {
+    margin-bottom: 10px;
+}
+
+p, li {
+    margin-bottom: 5px;
+}
+
+/**Layout untuk mobile (max-width: 414px)**/
+@media screen and (max-width: 414px) {
+    body {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "nav"
+            "section"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        background-color: #868686;
+    }
+
+    nav {
+        background-color: #e0e0e0;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav li {
+        margin: 0;
+    }
+
+    section, aside {
+        background-color: #e0e0e0;
+    }
+
+    footer {
+        background-color: #394867;
+    }
+}
+
+/**Layout untuk tablet portrait (min-width: 768px)*     */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "nav"
+            "section"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        background-color: #868686;
+
+    }
+
+    nav {
+        background-color: #e0e0e0;
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        max-height: 80px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    section {
+        background-color: #e0e0e0;
+        height: 40vh;
+    }
+    aside {
+        background-color: #e0e0e0;
+    }
+
+    footer {
+        background-color: #394867;
+    }
+}
+/* Layout untuk iPad landscape (min-width: 1024px and max-width: 1366px and orientation: landscape) */
+@media screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+    body {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "nav section section"
+            "aside aside aside"
+            "footer footer footer";
+        grid-template-columns: 20% 55% 25%;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    header {
+        background-color: #868686;
+    }
+
+    nav {
+        background-color: #e0e0e0;
+        padding: 20px;
+        border-radius: 8px;
+        font-size: 20px;
+        font-family: sans-serif;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    nav ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        display: block;
+        padding: 10px 15px;
+        border-radius: 5px;
+        background-color: #f5f5f5;
+        transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        background-color: #dcdcdc;
+    }
+
+    section, aside {
+        background-color: #e0e0e0;
+    }
+
+    footer {
+        background-color: #394867;
+    }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProfilMahasiswa.com</title>
+    <link rel="stylesheet" href="Tpibs.css" /> <!-- Menghubungkan CSS -->
+</head>
+<body>
+    <header class="container">
+        <!-- Gambar Profil -->
+        <div class="profile-image">
+            <img src="profile.png" alt="Gambar Profil Mahasiswa">
+        </div>
+        <!-- Teks Profil -->
+        <div class="profile-text">Jhon Calvin</div>
+    </header>
+
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('1')">Biodata</a></li>
+                <li><a href="#" onclick="showSection('2')">Pendidikan</a></li>
+                <li><a href="#" onclick="showSection('3')">Pengalaman</a></li>
+                <li><a href="#" onclick="showSection('4')">Keahlian</a></li>
+                <li><a href="#" onclick="showSection('5')">Publikasi</a></li>
+                <li><a href="#" onclick="showSection('6')">Tentang Saya</a></li>
+            </ul>
+        </nav>
+
+        <section id="content">
+            <div id="1">
+                <h2>Biodata</h2>
+                <p><strong>Nim:</strong> 2023081047</p>
+                <p><strong>Nama:</strong> Jhon calvin</p>
+                <p><strong>Agama:</strong> Kristen protestan</p>
+                <p><strong>Tanggal lahir:</strong> 28 Mei 2005</p>
+                <p><strong>Tempat lahir:</strong> Jakarta</p>
+            </div>
+
+            <div id="2" style="display: none;">
+                <h2>Pendidikan</h2>
+                <p><strong>SD:</strong> Sdn kebayoran lama 17 PAGI</p>
+                <p><strong>SMP:</strong> Smp makarya</p>
+                <p><strong>SMA:</strong> Smas pskd4</p>
+                <p><strong>KULIAH:</strong> Universitas pembangunan jaya</p>
+            </div>
+
+            <div id="3" style="display: none;">
+                <h2>Pengalaman</h2>
+                <p><strong>Magang:</strong> PT XYZ, Bagian IT, Jakarta</p>
+                <p><strong>Proyek:</strong> Sistem Informasi Perpustakaan</p>
+            </div>
+
+            <div id="4" style="display: none;">
+                <h2>Keahlian</h2>
+                <p><strong>Programming:</strong> Java, Python, HTML, CSS</p>
+                <p><strong>Database:</strong> MySQL</p>
+                <p><strong>Framework:</strong>Laravel</p>
+            </div>
+
+            <div id="5" style="display: none;">
+                <h2>Publikasi</h2>
+                <p><strong>Link Youtube:</strong> <a href="www.youtube.com/@jhoncalvin6769">"www.youtube.com/@jhoncalvin6769"</a></p>
+                <p><strong>Link GitHub:</strong> <a href="https://github.com/Varienhite">https://github.com/Varienhite</a></p>
+            </div>
+
+            <div id="6" style="display: none;">
+                <h2>Tentang Saya</h2>
+                <p><strong>Link:</strong> <a href="https://wa.me/081316391237" target="_blank">Whatsapp</a></p>
+                <p><strong>Link:</strong> <a href="https://www.instagram.com/verticalsy/" target="_blank">instagram</a></p>
+            </div>
+        </section>
+
+        <aside>
+            <h3>Hobi</h3>
+            <ul>
+                <li>Futsal</li>
+                <li>Games</li>
+                <li>Minisoccer</li>
+                <li>Olahraga</li>
+            </ul>
+        </aside>
+
+    <footer>
+        <div class="left">
+            <p>Twitter: @Dreamsss</p>
+            <p>FB: @Calvinrnt</p>
+            <p>Instagram: @jhoncalvinn_</p>
+        </div>
+        <div class="center">&copy; Copyright 2024. All Rights Reserved</div>
+        <div class="right">Web ini dibuat oleh Calvinrnt</div>
+    </footer>
+
+    <script>
+        function showSection(contentId) {
+            const sections = document.querySelectorAll('section > div');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
